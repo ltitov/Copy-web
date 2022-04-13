@@ -1,0 +1,90 @@
+.list {
+
+  // .list__container
+  &__container {}
+
+  // .list__head
+  &__head {}
+
+  // .list__title
+  &__title {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  // .list__body
+  &__body {}
+
+  // .list__row
+  &__row {}
+
+  // .list__item
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.item-card {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+
+  @media (max-width:$mobileSmall) {
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+  }
+
+  // .item-card__wrap
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    width: 100%;
+  }
+
+  // .item-card__eng
+  &__eng {
+    width: 40%;
+
+    @media (max-width:$mobileSmall) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  // .item-card__rus
+  &__rus {
+    width: 60%;
+
+    @media (max-width:$mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  // .item-card__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  & .favourite,
+  & .reader {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .favourite {}
+
+  & .reader {}
+}
